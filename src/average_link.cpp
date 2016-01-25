@@ -19,6 +19,8 @@
 #include <deque>
 #include <vector>
 #include <math.h>
+#include <cstdlib>
+#include <algorithm>
 
 using namespace std;
 

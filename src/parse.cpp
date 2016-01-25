@@ -3,6 +3,8 @@
 #include <string>
 #include <iostream>
 #include <map>
+#include <cstdlib>
+#include <cstdio>
 
 using namespace std;
 

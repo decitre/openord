@@ -5,6 +5,7 @@
 #include <deque>
 #include <iostream>
 #include <math.h>
+#include <cstdlib>
 
 using namespace std;
 

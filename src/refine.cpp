@@ -19,6 +19,7 @@
 #include <string>
 #include <deque>
 #include <vector>
+#include <cstdlib>
 
 using namespace std;
 
