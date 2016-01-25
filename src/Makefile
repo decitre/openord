@@ -13,6 +13,7 @@
 
 include ./Configuration.mk
 OBJ_DIR = $(HOBJ_DIR)
+MKDIR = mkdir -p
 
 VX_O     = $(OBJ_DIR)/layout.o $(OBJ_DIR)/parse.o \
            $(OBJ_DIR)/DensityGrid.o $(OBJ_DIR)/graph.o
@@ -26,7 +27,10 @@ REC_O 	 = $(OBJ_DIR)/average_link.o $(OBJ_DIR)/average_link_clust.o $(OBJ_DIR)/a
 
 REC_E	 = $(BIN_DIR)/truncate $(BIN_DIR)/average_link $(BIN_DIR)/coarsen $(BIN_DIR)/refine $(BIN_DIR)/recoord
 
-all: $(VX_O) $(VX_E) $(REC_O) $(REC_E)
+all: BUILD_DIRS $(VX_O) $(VX_E) $(REC_O) $(REC_E)
+
+BUILD_DIRS:
+	${MKDIR} ../obj ../bin
 
 $(OBJ_DIR)/truncate.o: truncate.cpp
 	$(CPP) $(CFLAGS) -o $@ truncate.cpp
